@@ -15,6 +15,7 @@
 # popularity('aPPle pine Apple kiwi Apple kiwi') -> ['apple', 'kiwi', 'pine']
 # popularity('aab aaa aac aab aac aaa x') -> ['aaa', 'aab', 'aac', 'x']
 
+
 def popularity(text):
     if not(isinstance(text, str)):
         return 'Введіть рядок'
