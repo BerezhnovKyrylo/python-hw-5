@@ -24,32 +24,3 @@
 # check('27/07/2022') -> None
 # check('28/07/2022') -> 'День Української Державності'
 # check('28/07/2020') -> 'День Української Державності'
-
-from vacations_calendar import calendar as cal
-from datetime import datetime
-
-def check(date):
-
-    try:
-        day, month, year = date.split('/')
-
-        if len(day) != 2 or len(month) != 2 or len(year) != 4:
-            raise ValueError
-
-        new_date = datetime(int(year), int(month), int(day))
-
-        date = date[:5]
-
-        if date in cal.keys():
-            print(cal[date])
-            return cal[date]
-        else:
-            print('В цей день немає свят')
-            return
-
-    except ValueError:
-        print('Невірна дата')
-        return
-
-if __name__ == '__main__':
-    check(input('Введіть дату у форматі DD/MM/YYYY: '))
