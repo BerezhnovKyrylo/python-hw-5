@@ -14,7 +14,6 @@
 # popularity('aPPle pine Apple kiwi Apple kiwi') -> ['apple', 'kiwi', 'pine']
 # popularity('aPPle pine Apple kiwi Apple kiwi') -> ['apple', 'kiwi', 'pine']
 # popularity('aab aaa aac aab aac aaa x') -> ['aaa', 'aab', 'aac', 'x']
-<<<<<<< HEAD
 
 
 def popularity(text):
@@ -37,5 +36,3 @@ print(popularity('apple kiwi pineapple kiwi apple kiwi'))
 print(popularity('aPPle pine Apple kiwi Apple kiwi'))
 print(popularity('aPPle pine Apple kiwi Apple kiwi'))
 print(popularity('aab aaa aac aab aac aaa x'))
-=======
->>>>>>> 27d03deae5d520362921d55aeebd5ed86e0a712a
