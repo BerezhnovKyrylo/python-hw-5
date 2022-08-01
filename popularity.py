@@ -17,26 +17,22 @@
 
 
 def popularity(text):
-    if not(isinstance(text, str)):
-        return 'Введіть рядок'
-    text = text.strip()
-    if (len(text) == 0):
-        return 'Аргумент не вказаний'
-    listWords = text.lower().split()
-    dictWords = dict()
-    sortedList = list()
-    for word in listWords:
-        if word in dictWords:
-            dictWords[word] = dictWords[word] + 1
+    Words = text.lower().split()
+    dWords = dict()
+    sortList = list()
+    for word in Words:
+        if word in dWords:
+            dWords[word] = dWords[word] + 1
         else:
-            dictWords[word] = 1
-    sortedDictWords = dict(sorted(dictWords.items(), key = lambda x: x[0]))
-    sortedListWords = sorted(sortedDictWords.items(), key = lambda x: x[1], reverse=True)
-    for word in sortedListWords:
-        sortedList.append(word[0])
-    return sortedList
+            dWords[word] = 1
+    sorteddWords = dict(sorted(dWords.items(), key = lambda x: x[0]))
+    sortedWords = sorted(sorteddWords.items(), key = lambda x: x[1], reverse=True)
+    for word in sortedWords:
+        sortList.append(word[0])
+    return sortList
+
 
 print(popularity('apple kiwi pineapple kiwi apple kiwi'))
-print(popularity('123213421414'))
+print(popularity('aPPle pine Apple kiwi Apple kiwi'))
 print(popularity('aPPle pine Apple kiwi Apple kiwi'))
 print(popularity('aab aaa aac aab aac aaa x'))
